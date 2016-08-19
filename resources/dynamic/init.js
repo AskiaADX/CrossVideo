@@ -1,0 +1,5 @@
+
+$(function() {
+    $('video').mediaelementplayer({
+    });
+});

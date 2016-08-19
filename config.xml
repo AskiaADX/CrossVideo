@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control  xmlns="http://www.askia.com/ADCSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.askia.com/ADCSchema http://www.askia.com/Downloads/dev/schemas/adc2.0/Config.xsd"
+          version="2.0.0"
+          askiaCompat="5.3.3">
+  <info>
+    <name>adc2-crossVideo</name>
+    <guid>93836d87-ad15-4206-93e2-4b9bc837ac2b</guid>
+    <version>1.0.0</version>
+    <date>2016-08-19</date>
+    <description><![CDATA[Cross browser video player]]></description>
+    <company>Askia</company>
+    <author><![CDATA[Paul Ferreira <paulf@askia.com>]]></author>
+    <site>http://www.askia.com</site>
+    <helpURL></helpURL>
+    <categories>
+      <category>General</category>
+    </categories>
+    <style width="400" height="300" />
+    <constraints>
+      <constraint on="questions" chapter="true" single="false" multiple="false" numeric="false" date="false" open="false" requireParentLoop="false" />
+      <constraint on="controls" responseblock="false" label="true" textbox="false" checkbox="false" listbox="false" radiobutton="false" />
+      <constraint on="responses" max="*" min="*" />
+    </constraints>
+  </info>
+  <outputs defaultOutput="default">
+    <output id="default">
+      <description><![CDATA[Default output]]></description>
+      <condition><![CDATA[Browser.Support("javascript")]]></condition>
+      <content fileName="styles.css" type="css" mode="dynamic" position="head" />
+      <content fileName="default.css" type="css" mode="static" position="head" />
+      <content fileName="default.html" type="html" mode="dynamic" position="placeholder" />
+      <content fileName="jquery-1.9.1.min.js" type="javascript" mode="static" position="head" />
+      <content fileName="mediaelement-and-player.min.js" type="javascript" mode="static" position="head" />
+      <content fileName="mediaelementplayer.min.css" type="css" mode="static" position="head" />
+      <content fileName="background.png" type="image" mode="static" position="none" />
+      <content fileName="bigplay.fw.png" type="image" mode="static" position="none" />
+      <content fileName="bigplay.png" type="image" mode="static" position="none" />
+      <content fileName="bigplay.svg" type="text" mode="static" position="none" />
+      <content fileName="controls-ted.png" type="image" mode="static" position="none" />
+      <content fileName="controls-wmp-bg.png" type="image" mode="static" position="none" />
+      <content fileName="controls-wmp.png" type="image" mode="static" position="none" />
+      <content fileName="controls.fw.png" type="image" mode="static" position="none" />
+      <content fileName="controls.png" type="image" mode="static" position="none" />
+      <content fileName="controls.svg" type="text" mode="static" position="none" />
+      <content fileName="jumpforward.png" type="image" mode="static" position="none" />
+      <content fileName="loading.gif" type="image" mode="static" position="none" />
+      <content fileName="mediaelement.min.js" type="javascript" mode="static" position="none" />
+      <content fileName="mediaelementplayer.min.js" type="javascript" mode="static" position="none" />
+      <content fileName="mejs-skins.css" type="css" mode="static" position="head" />
+      <content fileName="silverlightmediaelement.xap" type="binary" mode="static" position="none" />
+      <content fileName="skipback.png" type="image" mode="static" position="none" />
+      <content fileName="default.html" type="html" mode="dynamic" position="none" />
+      <content fileName="flashmediaelement.swf" type="flash" mode="static" position="none" />
+      <content fileName="init.js" type="javascript" mode="dynamic" position="foot" />
+    </output>
+  </outputs>
+  <properties>
+    <category id="General" name="General">
+      <property xsi:type="standardProperty" id="mp4Video" name="mp4 video path" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[Path of the mp4 video]]></description>
+        <value><![CDATA[??ResPath??yourfile.mp4]]></value>
+      </property>
+      <property xsi:type="standardProperty" id="webmVideo" name="webm video path" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[]]></description>
+        <value><![CDATA[??ResPath??video.webm]]></value>
+      </property>
+      <property xsi:type="standardProperty" id="ogvVideo" name="ogv video path" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[]]></description>
+        <value><![CDATA[??ResPath??video.ogv]]></value>
+      </property>
+      <property xsi:type="standardProperty" id="poster" name="Poster path" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[]]></description>
+        <value></value>
+      </property>
+      <property xsi:type="standardProperty" id="width" name="Width" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[]]></description>
+        <value><![CDATA[720px]]></value>
+      </property>
+      <property xsi:type="standardProperty" id="height" name="Height" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[]]></description>
+        <value><![CDATA[405px]]></value>
+      </property>
+      <property xsi:type="standardProperty" id="controlAlign" name="Control Alignment" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[The alignment of the control]]></description>
+        <value><![CDATA[center]]></value>
+        <options>
+          <option value="left" text="Left" />
+          <option value="center" text="Center" />
+          <option value="right" text="Right" />
+        </options>
+      </property>
+      <property xsi:type="standardProperty" id="controls" name="Show controls" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[Show controls]]></description>
+        <value><![CDATA[true]]></value>
+        <options>
+          <option value="true" text="True" />
+          <option value="false" text="False" />
+        </options>
+      </property>
+      <property xsi:type="standardProperty" id="autoplay" name="Auto play" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[]]></description>
+        <value><![CDATA[false]]></value>
+        <options>
+          <option value="false" text="False" />
+          <option value="true" text="True" />
+        </options>
+      </property>
+      <property xsi:type="standardProperty" id="skin" name="skn" type="boolean" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[Choose skin]]></description>
+        <value></value>
+        <options>
+          <option value="" text="default" />
+          <option value="mejs-ted" text="ted" />
+          <option value="mejs-wmp" text="wmp" />
+        </options>
+      </property>
+    </category>
+  </properties>
+</control>

@@ -1,0 +1,25 @@
+{%
+Dim controls = On(CurrentADC.PropValue("controls") = "true", "controls=\"controls\"", "")
+Dim poster = On(CurrentADC.PropValue("poster") <> "", "poster=\"" + CurrentADC.PropValue("poster") + "\"", "")
+Dim autoplay = On(CurrentADC.PropValue("autoplay") = "true", "autoplay=\"true\"", "")
+%}
+{% If (CurrentADC.PropValue("mp4Video").ToString().Right(3).ToLowerCase() <> "mp4") Then %}
+<div style="background:#FF0000;color:#FFFFFF;padding: 10px;font-weight:bold;text-align:center;">
+    This control is requires an mp4 file to work.
+</div>
+{% EndIf %}
+{% If (CurrentADC.PropValue("mp4Video").ToString().Right(3).ToLowerCase() = "mp4") Then %}
+<div class="{%:= CurrentADC.PropValue("skin") %}" id="adc_{%= CurrentADC.InstanceId %}" class="adc-crossVideo">
+    <video width="{%= CurrentADC.PropValue("width") %}" height="{%= CurrentADC.PropValue("height") %}" id="adc_{%= CurrentADC.InstanceId %}_video" {%:= poster %} {%:= controls %} {%:= autoplay %} preload="none">
+        <source type="video/mp4" src="{%:= CurrentADC.PropValue("mp4Video") %}" />
+        <source type="video/webm" src="{%:= CurrentADC.PropValue("webmVideo") %}" />
+        <source type="video/ogg" src="{%:= CurrentADC.PropValue("ogvVideo") %}" />
+        <object width="{%= CurrentADC.PropValue("width") %}" height="{%= CurrentADC.PropValue("height") %}" type="application/x-shockwave-flash" data="{%= CurrentADC.URLTo("static/flashmediaelement.swf") %}"> 		
+            <param name="movie" value="{%= CurrentADC.URLTo("static/flashmediaelement.swf") %}" /> 
+            <param name="flashvars" value="controls=true&amp;file={%:= CurrentADC.PropValue("mp4Video") %}" /> 		
+            <img src="{%= CurrentADC.PropValue("poster") %}" width="{%= CurrentADC.PropValue("width") %}" height="{%= CurrentADC.PropValue("height") %}" alt="No video playback capabilities" 
+                title="No video playback capabilities" />
+        </object> 	
+    </video>
+</div>
+{% EndIf %}
