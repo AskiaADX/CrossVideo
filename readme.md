@@ -1,3 +1,3 @@
-# adc2-crossVideo
+# crossVideo
    
 Cross browser video player
