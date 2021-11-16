@@ -7,7 +7,7 @@
   <info>
     <name>CrossVideo</name>
     <guid>93836d87-ad15-4206-93e2-4b9bc837ac2b</guid>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <date>2016-08-19</date>
     <description><![CDATA[Cross browser video player]]></description>
     <company>Askia</company>
@@ -57,19 +57,19 @@
   </outputs>
   <properties>
     <category id="General" name="General">
-      <property xsi:type="standardProperty" id="mp4Video" name="mp4 video path" type="string" mode="dynamic" require="true" visible="true">
+      <property xsi:type="standardProperty" id="mp4Video" name="mp4 video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[Path of the mp4 video]]></description>
-        <value><![CDATA[??ResPath??yourfile.mp4]]></value>
+        <value><![CDATA[]]></value>
       </property>
-      <property xsi:type="standardProperty" id="webmVideo" name="webm video path" type="string" mode="dynamic" require="true" visible="true">
+      <property xsi:type="standardProperty" id="webmVideo" name="webm video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[]]></description>
-        <value><![CDATA[??ResPath??video.webm]]></value>
+        <value><![CDATA[]]></value>
       </property>
-      <property xsi:type="standardProperty" id="ogvVideo" name="ogv video path" type="string" mode="dynamic" require="true" visible="true">
+      <property xsi:type="standardProperty" id="ogvVideo" name="ogv video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[]]></description>
-        <value><![CDATA[??ResPath??video.ogv]]></value>
+        <value><![CDATA[]]></value>
       </property>
-      <property xsi:type="standardProperty" id="poster" name="Poster path" type="string" mode="dynamic" require="false" visible="true">
+      <property xsi:type="standardProperty" id="poster" name="Poster path" type="file" mode="dynamic" require="false" visible="true">
         <description><![CDATA[]]></description>
         <value></value>
       </property>
