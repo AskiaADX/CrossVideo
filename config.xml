@@ -7,8 +7,8 @@
   <info>
     <name>CrossVideo</name>
     <guid>93836d87-ad15-4206-93e2-4b9bc837ac2b</guid>
-    <version>4.0.0</version>
-    <date>2016-08-19</date>
+    <version>4.1.0</version>
+    <date>2022-09-09</date>
     <description><![CDATA[Cross browser video player]]></description>
     <company>Askia</company>
     <author><![CDATA[Paul Ferreira <paulf@askia.com>]]></author>
@@ -27,29 +27,16 @@
     <output id="default" manageLoopDepth="0">
       <description><![CDATA[Default output]]></description>
       <condition><![CDATA[Browser.Support("javascript")]]></condition>
+      <content fileName="mejs-controls.svg" type="text" mode="static" position="none" />
       <content fileName="styles.css" type="css" mode="dynamic" position="head" />
       <content fileName="default.css" type="css" mode="static" position="head" />
       <content fileName="default.html" type="html" mode="dynamic" position="placeholder" />
-      <content fileName="jquery-1.9.1.min.js" type="javascript" mode="static" position="head" />
+      <content fileName="jquery-3.6.0.min.js" type="javascript" mode="static" position="head" />
       <content fileName="mediaelement-and-player.min.js" type="javascript" mode="static" position="head" />
       <content fileName="mediaelementplayer.min.css" type="css" mode="static" position="head" />
-      <content fileName="background.png" type="image" mode="static" position="none" />
-      <content fileName="bigplay.fw.png" type="image" mode="static" position="none" />
-      <content fileName="bigplay.png" type="image" mode="static" position="none" />
-      <content fileName="bigplay.svg" type="text" mode="static" position="none" />
-      <content fileName="controls-ted.png" type="image" mode="static" position="none" />
-      <content fileName="controls-wmp-bg.png" type="image" mode="static" position="none" />
-      <content fileName="controls-wmp.png" type="image" mode="static" position="none" />
-      <content fileName="controls.fw.png" type="image" mode="static" position="none" />
-      <content fileName="controls.png" type="image" mode="static" position="none" />
-      <content fileName="controls.svg" type="text" mode="static" position="none" />
-      <content fileName="jumpforward.png" type="image" mode="static" position="none" />
-      <content fileName="loading.gif" type="image" mode="static" position="none" />
       <content fileName="mediaelement.min.js" type="javascript" mode="static" position="none" />
       <content fileName="mediaelementplayer.min.js" type="javascript" mode="static" position="none" />
-      <content fileName="mejs-skins.css" type="css" mode="static" position="head" />
-      <content fileName="silverlightmediaelement.xap" type="binary" mode="static" position="none" />
-      <content fileName="skipback.png" type="image" mode="static" position="none" />
+      <content fileName="mediaelementplayer-legacy.min.css" type="css" mode="static" position="head" />
       <content fileName="default.html" type="html" mode="dynamic" position="none" />
       <content fileName="flashmediaelement.swf" type="flash" mode="static" position="none" />
       <content fileName="init.js" type="javascript" mode="dynamic" position="foot" />

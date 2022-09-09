@@ -1,4 +1,2 @@
-Version 1.0.0
-
-- Feature 1
-- Feature 2
+v4.1.0 - mediaelement.js update
+       - jQuery update
