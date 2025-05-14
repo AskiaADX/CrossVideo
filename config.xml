@@ -7,8 +7,8 @@
   <info>
     <name>CrossVideo</name>
     <guid>93836d87-ad15-4206-93e2-4b9bc837ac2b</guid>
-    <version>4.1.0</version>
-    <date>2022-09-09</date>
+    <version>4.1.1</version>
+    <date>2025-05-14</date>
     <description><![CDATA[Cross browser video player]]></description>
     <company>Askia</company>
     <author><![CDATA[Paul Ferreira <paulf@askia.com>]]></author>
@@ -46,15 +46,15 @@
     <category id="General" name="General">
       <property xsi:type="standardProperty" id="mp4Video" name="mp4 video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[Path of the mp4 video]]></description>
-        <value><![CDATA[]]></value>
+        <value></value>
       </property>
       <property xsi:type="standardProperty" id="webmVideo" name="webm video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[]]></description>
-        <value><![CDATA[]]></value>
+        <value></value>
       </property>
       <property xsi:type="standardProperty" id="ogvVideo" name="ogv video path" type="file" mode="dynamic" require="true" visible="true">
         <description><![CDATA[]]></description>
-        <value><![CDATA[]]></value>
+        <value></value>
       </property>
       <property xsi:type="standardProperty" id="poster" name="Poster path" type="file" mode="dynamic" require="false" visible="true">
         <description><![CDATA[]]></description>
